@@ -1,0 +1,17 @@
+{% extends "four_task/menu.html" %}
+
+{% block title %}Магазин{% endblock %}
+
+{% block pagename %}<h1>Магазин</h1>{% endblock %}
+
+{% block content%}
+        <ul>
+             {% for game in games %}
+            <li><a>{{game.title}}|{{game.description}}. Стоимость: {{game.cost}}</a>&nbsp;<button>{{buy}}</button></li>
+             {% endfor %}
+        </ul>
+
+    <br><form action="/">
+        <button>Вернуться обратно</button>
+    </form>
+{% endblock %}
