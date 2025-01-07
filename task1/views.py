@@ -39,6 +39,14 @@ def cart(request):
     return render(request, 'four_task/cart.html', context)
 
 
+def news_list(request):
+    news = News.objects.all()
+    paginator = Paginator(news, 5)
+    page_number = request.GET.get('page')
+    page_news = paginator.get_page(page_number)
+    return render(request, 'four_task/news.html', {'page_news': page_news})
+
+
 def sign_up_by_django(request):
     info = {}
     if request.method == 'POST':
