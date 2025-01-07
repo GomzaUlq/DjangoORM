@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import UserRegister
-from .models import Buyer, Game
-
+from .models import Buyer, Game, News
+from django.core.paginator import Paginator
 
 def home(request):
     title = 'Главная страница'
