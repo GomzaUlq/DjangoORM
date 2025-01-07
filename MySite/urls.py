@@ -25,5 +25,6 @@ urlpatterns = [
     path('django_sign_up/', sign_up_by_django),
     path('tea/', magazine),
     path('cart/', cart),
+    path('platform/news/', news_list),
 
 ]
